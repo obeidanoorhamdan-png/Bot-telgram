@@ -636,14 +636,6 @@ if __name__ == "__main__":
     print("✅ - تم تشغيل البوت بنجاح")
     
     # تشغيل البوت
-    if __name__ == '__main__':
-    keep_alive()      # تأكد من وجود 4 مسافات هنا
-
-
-
-    
-    app.run_polling() # تأكد من وجود 4 مسافات هنا
-
-
-
-
+if __name__ == '__main__':
+    keep_alive()
+    app.run_polling()
