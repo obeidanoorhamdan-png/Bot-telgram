@@ -637,5 +637,13 @@ if __name__ == "__main__":
     
     # تشغيل البوت
     if __name__ == '__main__':
-    keep_alive()
-    app.run_polling()  # تأكد أن الاسم app وليس application
+    keep_alive()      # تأكد من وجود 4 مسافات هنا
+
+
+
+    
+    app.run_polling() # تأكد من وجود 4 مسافات هنا
+
+
+
+
