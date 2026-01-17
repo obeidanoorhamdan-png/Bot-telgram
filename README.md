@@ -1,1 +1,4 @@
-# Bot-telgram
+python-telegram-bot
+requests
+flask
+gunicorn
