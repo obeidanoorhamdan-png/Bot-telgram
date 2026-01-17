@@ -1,3 +1,15 @@
+from flask import Flask
+from threading import Thread
+import os
+
+app_web = Flask(__name__)
+@app_web.route('/')
+def home(): return "I am alive"
+
+def keep_alive():
+    t = Thread(target=lambda: app_web.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080))))
+    t.start()
+    
 import logging
 import base64
 import os
@@ -624,4 +636,6 @@ if __name__ == "__main__":
     print("✅ - تم تشغيل البوت بنجاح")
     
     # تشغيل البوت
-    app.run_polling(allowed_updates=Update.ALL_TYPES, drop_pending_updates=True)
+    if __name__ == '__main__':
+    keep_alive()
+    app.run_polling()  # تأكد أن الاسم app وليس application
