@@ -9,7 +9,7 @@ def home(): return "I am alive"
 def keep_alive():
     t = Thread(target=lambda: app_web.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080))))
     t.start()
-    import logging
+import logging
 import base64
 import os
 import sqlite3
